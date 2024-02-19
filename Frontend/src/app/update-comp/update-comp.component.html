@@ -1,0 +1,49 @@
+<body>
+  <div class="mx-auto" style="width: 200px;">
+      <h1>Add Jobs</h1>
+      </div>
+    <div class="container col-md-6">
+        <form (ngSubmit)="validator()">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Job Title</label>
+                  <input type="text"  class="form-control" id="jobTitle"   [(ngModel)]="job.jobTitle"  [ngModelOptions]="{standalone: true}"  placeholder="Job Title" ngModel required >
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputCountry">Job Type</label>
+                    <select id="Type" class="form-control"   [(ngModel)]="job.jobType"  [ngModelOptions]="{standalone: true}"  >
+                    <option>Full-Time</option>
+                    <option>Part-Time</option>
+                    <option>Contract</option>
+                    <option>Seasonal</option>
+                    <option>Temporary</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="form-row">
+               <div class="form-group col-md-6">
+                  <label for="inputState">Location</label>
+                  <select id="State" class="form-control"  [(ngModel)]="job.location"  [ngModelOptions]="{standalone: true}" ngModel="required">
+                    <option selected>Mumbai</option>
+                    <option>Thane</option>
+                    <option>Pune</option>
+                    <option>Banglore</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Openings</label>
+                  <input type="number" class="form-control" id="inputEmail4"  [(ngModel)]="job.openings"  [ngModelOptions]="{standalone: true}" placeholder="Openings" ngModel="required">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Experience</label>
+                  <input type="number" class="form-control" id="inputEmail4"  [(ngModel)]="job.experience"  [ngModelOptions]="{standalone: true}" placeholder="Experience" ngModel="required">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Description</label>
+                <textarea class="form-control" id="Description"  [(ngModel)]="job.description"  [ngModelOptions]="{standalone: true}" placeholder="Description" ngModel required></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit" >Update Job</button>
+        </form>
+    </div>
+  </body>
