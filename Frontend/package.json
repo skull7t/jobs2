@@ -11,6 +11,8 @@
   },
   "private": true,
   "dependencies": {
+  "undici": "^6.6.1",
+  "@angular-devkit/build-angular": "^17.2.0-rc.1",
     "@angular/animations": "^17.1.0",
     "@angular/common": "^17.1.0",
     "@angular/compiler": "^17.1.0",
