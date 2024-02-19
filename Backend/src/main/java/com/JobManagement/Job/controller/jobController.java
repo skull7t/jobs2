@@ -17,7 +17,7 @@ import com.JobManagement.Job.model.jobModel;
 import com.JobManagement.Job.service.jobService;
 
 
-@CrossOrigin(origins = "http://localhost:4200/") 
+@CrossOrigin("*") 
 @RestController
 public class jobController {
 
