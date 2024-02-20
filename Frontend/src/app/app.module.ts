@@ -27,9 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     {
       provide: HttpClient,
-      useFactory: provideHttpClient,
-      // Add the withFetch() option
-      withFetch: true,
+      useFactory: () => new HttpClient({ fetch }),
     },
   ],
   bootstrap: [AppComponent]
