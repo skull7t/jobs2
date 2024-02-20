@@ -25,16 +25,16 @@ export class AddJobComponent {
 
   validator(){
     console.log("in validator")
-    if((this.job.jobTitle==='')||
-    (this.job.description==='')||
-    (this.job.jobType==='')||
-    (this.job.location==='')||
-    (this.job.openings===0))
-    {
-      alert("fill all fields")
-    }
-    else{
-      console.log("else bllock")
+    if (
+      !this.job.jobTitle ||
+      !this.job.description ||
+      !this.job.jobType ||
+      !this.job.location ||
+      this.job.openings === 0
+    ) {
+      alert("Please fill all fields")
+    } else {
+      console.log("else block")
       this.onSubmit();
     }
   }
