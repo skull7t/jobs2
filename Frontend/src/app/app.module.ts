@@ -25,10 +25,7 @@ import { HttpClientModule, HttpClient  } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-  {
-      provide: HttpClient,
-      useFactory: () => new HttpClient(),
-    },
+     HttpClient,
   ],
   bootstrap: [AppComponent]
 })
