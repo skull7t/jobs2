@@ -26,6 +26,11 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     provideClientHydration()
+    provide: HttpClient,
+    useFactory: provideHttpClient,
+     deps: [],
+      // Add the withFetch() option
+      withFetch: true,
   ],
   bootstrap: [AppComponent]
 })
