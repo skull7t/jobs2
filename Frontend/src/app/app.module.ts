@@ -9,7 +9,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UpdateCompComponent } from './update-comp/update-comp.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ServerTransferStateModule } from '@angular/platform-server';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,10 @@ import { ServerTransferStateModule } from '@angular/platform-server';
     HttpClientModule
   ],
   providers: [
-    provideClientHydration(),
-   ServerTransferStateModule
+      provide: HttpClient,
+      useFactory: provideHttpClient,
+      // Add the withFetch() option
+      withFetch: true,
   ],
   bootstrap: [AppComponent]
 })
