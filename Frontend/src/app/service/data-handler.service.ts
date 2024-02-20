@@ -11,7 +11,7 @@ export class DataHandlerService {
   constructor(private httpc:HttpClient) {
 
    }
-   private  baseurl="http://localhost:8080/jobs";
+   private  baseurl="http://localhost:7070/jobs";
 
    getJob():Observable<Jobs[]>{
       return this.httpc.get<Jobs[]>(`${this.baseurl}`);
