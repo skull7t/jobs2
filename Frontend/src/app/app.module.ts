@@ -8,7 +8,7 @@ import { AllJobsComponent } from './all-jobs/all-jobs.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UpdateCompComponent } from './update-comp/update-comp.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient  } from '@angular/common/http';
 
 @NgModule({
   declarations: [
