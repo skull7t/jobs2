@@ -25,10 +25,12 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
+    {
       provide: HttpClient,
       useFactory: provideHttpClient,
       // Add the withFetch() option
       withFetch: true,
+    },
   ],
   bootstrap: [AppComponent]
 })
